@@ -1,0 +1,22 @@
+{
+  "name": "oracle_project",
+  "version": "1.0.0",
+  "description": "this is an assessment project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talk2emmzy/Oracle_Apex_Application.git"
+  },
+  "author": "Emmanuel Ofordile Okoye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talk2emmzy/Oracle_Apex_Application/issues"
+  },
+  "homepage": "https://github.com/talk2emmzy/Oracle_Apex_Application#readme",
+  "devDependencies": {
+    "cypress": "^13.6.3"
+  }
+}
