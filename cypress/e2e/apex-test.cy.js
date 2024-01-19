@@ -25,11 +25,11 @@ describe('Emmanuel WorkSpace Testing', () => {
 
             cy.get('#B63921625210721899367 > .t-Button-label').click()
 
-            cy.wait(2000);
+            // cy.wait(2000);
 
             cy.scrollTo('bottom');
 
-            cy.get('[data-page="1"] > .a-GV-pageButton').click()
+            cy.get('[data-page="1"] > .a-GV-pageButton').should('be.visible').click()
 
 
             let expectedNum = 20;
@@ -95,11 +95,19 @@ describe('Emmanuel WorkSpace Testing', () => {
 
             let expChartName = "Deli"
 
-            cy.get("path[d='M62,161H72V171H62Z']").then((y)=>{
+            cy.get("td[class='a-GV-cell u-tS']").eq(3).then((y)=>{
 
                 let actChartName = y.text()
 
                 assert.equal(actChartName,expChartName)
+            })
+
+            cy.get("svg[width='100%']").should('exist')
+            .find('g g g g g g[fill="rgba(0,0,0,0)"] path')
+            .eq(4).click({force:true})
+
+            cy.get('[id*="_dvtActiveElement"]').invoke('attr', 'aria-label').then(value=>{
+                expect(value).to.include('Series: Deli; Group: Grapes; Value: 42')
             })
 
         })
