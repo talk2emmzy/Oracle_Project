@@ -7,7 +7,7 @@ describe('Emmanuel WorkSpace Testing', () => {
     })
 
 
-    it('Verify table data is updated and chart is updated where quantity of order is equal to 20', () => {
+    it('Verify table datas is updated and chart is updated where quantity of order is equal to 20', () => {
 
         cy.fixture('testdata').then( (data)=>{
 
